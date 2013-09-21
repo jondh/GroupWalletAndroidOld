@@ -24,6 +24,16 @@
 	   	});
 	   	getUsers.execute();
  * 
+ * 	SERVER input (name value pairs): "userID" -> String user ID
+ * 									 "walletID" -> String wallet ID (for scope = "wallet")
+ * 									 "scope" -> whether to get amounts for "all" or a "wallet"
+ * 
+ *  SERVER output: returns a JSON array and expects the following name value pairs:
+ *  				"userID"    -> user ID (int)
+ *  				"fbID"      -> facebook ID (int)
+ *  				"userName"  -> user name (String)
+ *  				"firstName" -> first name (String)
+ *  				"lastName"	-> last name (String)
  */
 
 package com.whereone.groupwalletmodules;
@@ -85,7 +95,7 @@ public class GetUsers extends AsyncTask<Void, Void, ArrayList<User>>{
 				if(jObj.getInt("userID") != user.getUserID()){
 					User curUser = new User(jObj.getInt("userID"),
 							jObj.getInt("fbID"),
-							jObj.getString("username"),
+							jObj.getString("userName"),
 							jObj.getString("firstName"), 
 							jObj.getString("lastName"),
 							324.4,

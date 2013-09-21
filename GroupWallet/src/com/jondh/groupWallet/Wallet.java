@@ -10,7 +10,7 @@ public class Wallet {
 	private Integer id;
 	private String name;
 	
-	Wallet(Integer _id, String _name){
+	public Wallet(Integer _id, String _name){
 		id = _id;
 		name = _name;
 	}

@@ -23,6 +23,11 @@
 	   	});
 	   	getWallets.execute();
  * 
+ *  SERVER input (name value pairs): "userID" -> String user ID
+ * 
+ *  SERVER output: returns a JSON array and expects the following name value pairs:
+ *  				"walletID"  -> wallet ID (int)
+ *  				"walletName"-> wallet name (String)
  */
 
 package com.whereone.groupwalletmodules;

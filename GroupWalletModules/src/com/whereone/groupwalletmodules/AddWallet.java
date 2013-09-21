@@ -23,6 +23,10 @@
 	   	});
 	   	addWallet.execute();
  * 
+ * 	SERVER input (name value pairs): "userID" -> String user ID
+ * 									 "walletName" -> String wallet name
+ * 
+ *  SERVER output: String result -> "success" to indicate successful wallet addition, anything else means failure
  */
 
 package com.whereone.groupwalletmodules;
@@ -61,7 +65,7 @@ public class AddWallet extends AsyncTask<Void, Void, String>{
 		String url = "http://jondh.com/GroupWallet/android/addWallet.php";
 		ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 		nameValuePairs.add(new BasicNameValuePair("userID", user.getUserID().toString()));
-		nameValuePairs.add(new BasicNameValuePair("otherUID",walletName));
+		nameValuePairs.add(new BasicNameValuePair("walletName",walletName));
 		String result = httpRequest.sendRequest(nameValuePairs, url);
 		
 		return result;
@@ -83,26 +87,6 @@ public class AddWallet extends AsyncTask<Void, Void, String>{
 	public interface AddWalletListener{
 		public void addWalletComplete(String result);
 		public void addWalletCancelled();
-	}
-	
-	public class AddWalletException extends Exception{
-
-		private static final long serialVersionUID = 6886806143449463848L;
-		private String message;
-
-		public AddWalletException(){
-			super();
-			message = "unknown";
-		}
-
-		public AddWalletException(String _message){
-			super(_message);
-			message = _message;
-		}
-		
-		public String getError(){
-			return message;
-		}
 	}
 
 }

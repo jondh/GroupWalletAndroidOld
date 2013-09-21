@@ -50,7 +50,7 @@ public class User {
 		totalAmountRefresh = true;
 	}
 	
-	User(Integer _userID, Integer _fbID, String _userName, String _firstName, String _lastName, Double _walletAmount, Double _totalAmount){
+	public User(Integer _userID, Integer _fbID, String _userName, String _firstName, String _lastName, Double _walletAmount, Double _totalAmount){
 		userID = _userID;
 		fbID = _fbID;
 		userName = _userName;

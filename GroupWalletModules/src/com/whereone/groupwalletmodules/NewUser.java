@@ -25,6 +25,13 @@
 	   	});
 	   	newUser.execute();
  * 
+ *  SERVER input (name value pairs): "userName" -> String user name
+ * 									 "fbID"     -> Integer facebook ID
+ * 									 "email"    -> String email address
+ * 									 "password" -> String password
+ * 									 "app"      -> Which app this account is for "GroupWallet"
+ * 
+ *  SERVER output: String result -> "success" to indicate successful user creation, anything else means failure
  */
 
 package com.whereone.groupwalletmodules;
@@ -42,14 +49,16 @@ public class NewUser extends AsyncTask<Void, Void, String>{
 	private DBhttpRequest httpRequest;
 	private NewUserListener listener;
 	private String userName;
+	private Integer fbID;
 	private String email;
 	private String password;
 	private String app;
 	
 	//Constructor
-	NewUser(DBhttpRequest _httpRequest, String _userName, String _email, String _password, String _app){
+	NewUser(DBhttpRequest _httpRequest, String _userName, Integer _fbID, String _email, String _password, String _app){
 		httpRequest = _httpRequest;
 		userName = _userName;
+		fbID = _fbID;
 		email = _email;
 		password = _password;
 		app = _app;
@@ -66,6 +75,7 @@ public class NewUser extends AsyncTask<Void, Void, String>{
 		String url = "http://jondh.com/GroupWallet/android/newUser.php";
 		ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 		nameValuePairs.add(new BasicNameValuePair("userName", userName));
+		nameValuePairs.add(new BasicNameValuePair("fbID", fbID.toString()));
 		nameValuePairs.add(new BasicNameValuePair("email", email));
 		nameValuePairs.add(new BasicNameValuePair("password", password));
 		nameValuePairs.add(new BasicNameValuePair("app", app));

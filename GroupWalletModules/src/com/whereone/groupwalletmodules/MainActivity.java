@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 		final Button button = (Button) findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	NewUser newUser = new NewUser(httpRequest, "jondh", "jondh@ymail.com", "lopol", "GroupWallet");
+            	NewUser newUser = new NewUser(httpRequest, "jondh", 0, "jondh@ymail.com", "lopol", "GroupWallet");
         	   	newUser.setNewUserListener(new NewUserListener(){
         	   		@Override
         	   		public void newUserComplete(String result){

@@ -4,6 +4,11 @@
  * Description: This class is used to get the money owe / owed from one user to another.
  * 				It uses AsyncTask so it will need to executed with the following list of parameters:
  * 				String userID, String userID, String walletID
+ * 
+ * SERVER input (name value pairs): "userID" -> String user ID
+ * 									 "otherUID" -> the other users UID (for scope = "user")
+ * 									 "walletID" -> String wallet ID (for scope = "wallet")
+ * 									 "scope" -> whether to get amounts for "all", a "user", or a "wallet"
  */
 
 package com.jondh.groupWallet;
