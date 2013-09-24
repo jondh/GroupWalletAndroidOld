@@ -1,4 +1,4 @@
-package com.whereone.groupwalletmodules;
+package com.whereone.groupWallet.controllers;
 
 import java.io.BufferedReader;
 import java.io.IOException;

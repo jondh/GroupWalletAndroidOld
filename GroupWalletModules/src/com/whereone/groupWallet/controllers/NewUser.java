@@ -34,7 +34,7 @@
  *  SERVER output: String result -> "success" to indicate successful user creation, anything else means failure
  */
 
-package com.whereone.groupwalletmodules;
+package com.whereone.groupWallet.controllers;
 
 import java.util.ArrayList;
 

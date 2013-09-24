@@ -29,7 +29,7 @@
  *  SERVER output: String result -> "success" to indicate successful wallet addition, anything else means failure
  */
 
-package com.whereone.groupwalletmodules;
+package com.whereone.groupWallet.controllers;
 
 import java.util.ArrayList;
 

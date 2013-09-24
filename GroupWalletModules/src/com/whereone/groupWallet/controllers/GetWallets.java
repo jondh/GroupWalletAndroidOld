@@ -30,7 +30,7 @@
  *  				"walletName"-> wallet name (String)
  */
 
-package com.whereone.groupwalletmodules;
+package com.whereone.groupWallet.controllers;
 
 import java.util.ArrayList;
 

@@ -18,7 +18,7 @@ public class Record {
 		comment = "";
 	}
 	
-	Record(String _user, Integer _amount, String _comment){
+	public Record(String _user, Integer _amount, String _comment){
 		user = _user;
 		amount = _amount;
 		comment = _comment;

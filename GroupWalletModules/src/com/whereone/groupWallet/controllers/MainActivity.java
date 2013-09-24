@@ -1,4 +1,4 @@
-package com.whereone.groupwalletmodules;
+package com.whereone.groupWallet.controllers;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.jondh.groupWallet.DBhttpRequest;
-import com.whereone.groupwalletmodules.NewUser.NewUserListener;
+import com.whereone.groupWallet.controllers.NewUser.NewUserListener;
+import com.whereone.groupwalletmodules.R;
 
 public class MainActivity extends Activity {
 

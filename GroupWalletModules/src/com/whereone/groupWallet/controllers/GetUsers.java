@@ -24,9 +24,10 @@
 	   	});
 	   	getUsers.execute();
  * 
- * 	SERVER input (name value pairs): "userID" -> String user ID
- * 									 "walletID" -> String wallet ID (for scope = "wallet")
- * 									 "scope" -> whether to get amounts for "all" or a "wallet"
+ * 	SERVER input (name value pairs):
+ * 					"userID" -> String user ID
+ * 					"walletID" -> String wallet ID (for scope = "wallet")
+ * 					"scope" -> whether to get amounts for "all" or a "wallet"
  * 
  *  SERVER output: returns a JSON array and expects the following name value pairs:
  *  				"userID"    -> user ID (int)
@@ -36,7 +37,7 @@
  *  				"lastName"	-> last name (String)
  */
 
-package com.whereone.groupwalletmodules;
+package com.whereone.groupWallet.controllers;
 
 import java.util.ArrayList;
 
